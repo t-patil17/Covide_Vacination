@@ -1,0 +1,29 @@
+<div class="headbody">
+  <div class="main">
+    <div class="signup">
+      <form action="/action_page.php">
+        <label for="chk">Sign up</label>
+
+        <div class="mb-3 mt-3">
+
+          <input type="text" class="form-control" id="name" placeholder="user name" name="name">
+          <span class="user"><i class="fa fa-user" aria-hidden="true"></i></span>
+        </div>
+
+        <div class="mb-3 mt-3">
+
+          <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+          <span class="mailicon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+        </div>
+        <div class="mb-3">
+
+          <input [type]="changetype?'password' : 'text' " placeholder="Enter password" name="pswd">
+          <span class="eyeicon" (click)="view()"><i [ngClass]="visible? 'fa fa-eye' : ' fa fa-eye-slash'"
+              aria-hidden="true"></i></span>
+
+        </div>
+        <button  type="submit" class="btn "  routerLink="/about-us" >Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>

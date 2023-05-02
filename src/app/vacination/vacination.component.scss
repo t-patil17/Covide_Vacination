@@ -1,0 +1,117 @@
+
+
+
+.modalbtn{
+	background: #573b8a;
+    color: white;
+    padding: 10px 120px;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+
+}
+
+.imgright img{
+    width: 50px ;
+    // height: 10px;
+    margin-left: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    color: #021859;
+    font-size: 50px;
+}
+
+  .secondcol h2{
+    margin-top: 5em;
+    margin-left: 7em;
+    max-width: 130px;
+    color:white;
+    // font-size: 30px;
+    
+}
+
+small{
+    margin-left: 14em;
+    font-size: 16px;
+    font-weight: 500;
+    color:#021859;
+}
+
+.addbtn {
+	background: #021859;
+    margin-left: 14em;
+    margin-top: 1em;
+    padding: 10px 45px;
+    color: white;
+    font-weight: 600;
+
+
+}
+
+.addbtn:hover{
+	background: linear-gradient(to bottom, #0f0c29, #524d8a, #4ea2c8);
+   outline: none;
+	border: none;
+    font-size: 18px;
+}
+
+.secondcol{
+    background-image: url("../../assets/A-unsplash\ col-2.jpg");
+    border-radius: 300px;
+
+}
+
+.hand img {
+    width: 110px;
+    margin-left:270px;
+    // text-align: center;
+}
+
+
+table{
+    margin-bottom: 17em;
+}
+
+.heading h2 {
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.one {
+    background-color: #4588ed;
+    color: white;
+
+}
+.two{
+    background-color:#021859;
+    color: white;
+    
+}
+
+.three{
+    color: white;
+    background-color: #0dcaf0;
+}
+
+td .btn {
+    background: linear-gradient(to bottom, #0f0c29, #524d8a, #4ea2c8);
+    outline: none;
+    border: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+td i {
+    margin-left: 20px ;
+    font-size: 30px;
+    
+}
+
+td {
+    font-weight: 500;
+    font-size: 20px;
+}

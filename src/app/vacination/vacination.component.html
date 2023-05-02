@@ -1,0 +1,179 @@
+
+<!-- <app-header></app-header> -->
+<h1>Covid-19 Vaccinations Portal </h1>
+
+<div class="container-fluid bg">
+  <div class="row">
+  <div class="col-lg-6">
+    <img src="../../assets/doctor new col-6.avif" alt="" width="100%" height="100%">
+  </div>
+  <div class="col-lg-6 secondcol">
+
+    <h2>TIME TO VACCINATE</h2>
+    <small>GET YOUR FLU VACCINE RIGHT NOW </small><br>
+  <button type="button" class="btn addbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">ADD CANDIDATES</button>
+  
+  <div class="hand">
+   <img src="../../assets/click-hand.gif" alt="" >
+  </div>
+</div>
+  </div>
+
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Candidate Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="col-form-label">Users Name:</label>
+            <input type="text" class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name">
+          </div>
+
+          <div class="mb-3">
+            <label for="number" class="col-form-label">Enter Your Mobile No:</label>
+            <input type="tel" class="form-control" id="number">
+          </div>
+
+
+          <label for="vacine" class="col-form-label">Select your Vaccine</label>
+          <select class="form-select" [(ngModel)]="selectitm" [ngModelOptions]="{standalone: true}" >
+            <!-- <option selected> select Vaccine Type</option> -->
+            <option value="Sputnik v" ng-options="data.Sputnik v">Sputnik v</option>
+            <option value="Covishield" ng-options="data.Covishield">Covishield</option>
+            <option value="Covaxin" ng-options="data.Covaxin">Covaxin</option>
+          </select>
+
+          <button type="button" class="btn modalbtn">Get OTP</button>
+
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="memberadd()" [disabled]="name== '' ||selectitm== '' " > ADD </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+<div class="row heading">
+    <div class="col-lg-4">
+     <h2>ALL CANDIDATES</h2>
+        <table class="table table-hover">
+          
+            <thead class="one">
+              <tr>
+                <th>Sr.No</th>
+                <th>Candidate</th>
+                <th>Vaccine</th>
+                <th>Actions</th>
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of member;  let i = index" >
+                <td>{{i+1}}</td>
+
+                <td>{{data.name}}</td>
+                <td>{{data.selectitm}}</td>
+                <td><button type="button" class="btn" (click)="dose1(i)" >First Dose</button>
+                <i class="fa fa-trash" aria-hidden="true" (click)="Remove(i)" ></i></td>
+                
+              </tr>
+             
+            </tbody>
+          </table>
+
+    </div>
+
+
+    <!-- second column  -->
+    <div class="col-lg-4">
+
+     <h2>DOSE-1 CANDIDATES</h2>
+
+        <table class="table table-hover">
+            <thead class="two" >
+              <tr>
+                <th>Sr.No</th>
+                <th>Candidate</th>
+                <th>Vaccine</th>
+                <th>Actions</th>
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of member1 ; let i=index">
+                <td>{{i+1}}</td>
+
+                <td>{{data.name}}</td>
+                <td>{{data.selectitm}}</td>
+
+                <td><button type="button" class="btn" (click)="dose2(i)" >Second Dose</button>
+
+                <i class="fa fa-undo" aria-hidden="true"  (click)="undo(i)" ></i></td>
+              
+                
+
+                
+              </tr>
+             
+            </tbody>
+          </table>
+
+
+    </div>
+
+    <!-- third column  -->
+
+    <div class="col-lg-4">
+
+     <h2>DOSE-2 CANDIDATES</h2>
+
+        <table class="table table-hover">
+            <thead class="three">
+              <tr>
+                <th>Sr.No</th>
+                <th>Candidate</th>
+                <th>Actions</th>
+
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let data of memberdetail ; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{data.name}}</td>
+                  <td class="imgright">
+                  <i class="fa fa-undo" aria-hidden="true"  (click)="undo2(i)" ></i>
+                  <img src="../../assets/check-mark-verified.gif" alt="">
+                </td>
+                
+                
+              </tr>
+             
+            </tbody>
+          </table>
+
+
+    </div>
+
+
+</div>
+
+</div>
+<app-footer></app-footer>
