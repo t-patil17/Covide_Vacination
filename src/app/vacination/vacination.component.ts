@@ -9,7 +9,7 @@ export class VacinationComponent {
 
   name ="";
 
-  selectitm :any ;
+  selectitm ="" ;
 
   member :any =[];
   member1: any=[] ;

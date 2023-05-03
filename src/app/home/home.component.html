@@ -12,17 +12,17 @@
 
         <div class="mb-3 mt-3">
 
-          <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+          <input type="email"  class="form-control" [(ngModel)]="email" placeholder="Enter email" name="email">
           <span class="mailicon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
         </div>
         <div class="mb-3">
 
-          <input [type]="changetype?'password' : 'text' " placeholder="Enter password" name="pswd">
+          <input [type]="changetype?'password' : 'text' " [(ngModel)]="password" placeholder="Enter password" name="pswd">
           <span class="eyeicon" (click)="view()"><i [ngClass]="visible? 'fa fa-eye' : ' fa fa-eye-slash'"
               aria-hidden="true"></i></span>
 
         </div>
-        <button  type="submit" class="btn "  routerLink="/about-us" >Sign Up</button>
+        <button  type="submit" class="btn "   (click)="login()" >Sign Up</button>
       </form>
     </div>
   </div>

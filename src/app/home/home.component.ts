@@ -30,16 +30,21 @@ export class HomeComponent {
 
   }
 
-  // login(){
-  //   if (this.email == '') 
-  //   {
-  //     alert("please enter your Email ID");
-  //     return ;
-      
-  //   }
+  login(){
+    if (this.email == '' ) 
+    {
+      alert("please enter your Email ID ");
+    }
+    else if (this.password== ''){
+      alert("Enter Password")
+
+    }
+    else{
+      this.router.navigateByUrl('/about-us')
+  }
+  }
   
 
-  //   this.router.navigateByUrl('/about-us')
-  // }
+    
 
 }

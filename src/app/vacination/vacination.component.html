@@ -1,11 +1,11 @@
 
-<!-- <app-header></app-header> -->
+<app-header></app-header>
 <h1>Covid-19 Vaccinations Portal </h1>
 
 <div class="container-fluid bg">
   <div class="row">
   <div class="col-lg-6">
-    <img src="../../assets/doctor new col-6.avif" alt="" width="100%" height="100%">
+    <img src="assets/doctor new col-6.avif" alt="" width="100%" height="100%">
   </div>
   <div class="col-lg-6 secondcol">
 
@@ -14,7 +14,7 @@
   <button type="button" class="btn addbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">ADD CANDIDATES</button>
   
   <div class="hand">
-   <img src="../../assets/click-hand.gif" alt="" >
+   <img src="assets/click-hand.gif" alt="" >
   </div>
 </div>
   </div>
@@ -58,7 +58,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="memberadd()" [disabled]="name== '' ||selectitm== '' " > ADD </button>
+        <button type="button" class="btn btn-primary" (click)="memberadd()" [disabled]="selectitm == '' || name == '' " > ADD </button>
       </div>
     </div>
   </div>
@@ -160,7 +160,7 @@
                 <td>{{data.name}}</td>
                   <td class="imgright">
                   <i class="fa fa-undo" aria-hidden="true"  (click)="undo2(i)" ></i>
-                  <img src="../../assets/check-mark-verified.gif" alt="">
+                  <img src="assets/check-mark-verified.gif" alt="">
                 </td>
                 
                 
